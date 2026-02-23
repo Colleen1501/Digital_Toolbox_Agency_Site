@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Digital Toolbox Agency | AI Integration for South African SMEs</title>
+<meta name="description" content="We help South African SMEs integrate practical AI into their daily workflows - saving time, cutting admin, and freeing your team for high-value work."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet"/>
+<style>
+:root{--bg:#080A0F;--bg2:#0D1018;--bg3:#12151E;--card:#141720;--border:rgba(255,255,255,0.07);--teal:#00D4AA;--teal2:#00A886;--gold:#F0B940;--gold2:#C99420;--red:#E84560;--text:#E8EAF2;--muted:#6B7280;--muted2:#9AA0AE;--white:#FFFFFF;--font-h:'Syne',sans-serif;--font-b:'DM Sans',sans-serif;--r:12px;--r2:20px;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:var(--font-b);font-size:16px;line-height:1.6;overflow-x:hidden;}
+::-webkit-scrollbar{width:5px;}::-webkit-scrollbar-track{background:var(--bg2);}::-webkit-scrollbar-thumb{background:var(--teal2);border-radius:3px;}
+::selection{background:rgba(0,212,170,0.22);color:#fff;}
+.container{max-width:1160px;margin:0 auto;padding:0 28px;}
+.tag{display:inline-block;font-family:var(--font-h);font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--teal);background:rgba(0,212,170,0.09);border:1px solid rgba(0,212,170,0.22);padding:6px 16px;border-radius:40px;margin-bottom:20px;}
+.tag.gold{color:var(--gold);background:rgba(240,185,64,0.09);border-color:rgba(240,185,64,0.22);}
+h1,h2,h3,h4{font-family:var(--font-h);}
+.section-title{font-size:clamp(1.9rem,4vw,2.8rem);font-weight:800;line-height:1.1;letter-spacing:-0.02em;}
+.section-sub{font-size:1.05rem;color:var(--muted2);max-width:580px;margin-top:12px;line-height:1.7;}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-h);font-size:13px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:13px 26px;border-radius:6px;border:none;cursor:pointer;text-decoration:none;transition:all 0.25s;}
+.btn-teal{background:var(--teal);color:#000;}
+.btn-teal:hover{background:var(--teal2);transform:translateY(-2px);box-shadow:0 10px 28px rgba(0,212,170,0.32);}
+.btn-outline{background:transparent;color:var(--text);border:1px solid var(--border);}
+.btn-outline:hover{border-color:var(--teal);color:var(--teal);}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity 0.6s ease,transform 0.6s ease;}
+.reveal.on{opacity:1;transform:none;}
+section{padding:96px 0;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:background 0.3s,border-color 0.3s;}
+nav.sc{background:rgba(8,10,15,0.94);backdrop-filter:blur(18px);border-bottom:1px solid var(--border);}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px;}
+.logo{font-family:var(--font-h);font-weight:800;font-size:1.05rem;color:#fff;text-decoration:none;display:flex;align-items:center;gap:10px;}
+.logo-box{width:30px;height:30px;background:var(--teal);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.logo-box svg{width:16px;height:16px;}
+.nav-links{display:flex;align-items:center;gap:26px;list-style:none;}
+.nav-links a{font-size:13px;font-weight:500;color:var(--muted2);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover{color:var(--teal);}
+.ham{display:none;background:none;border:1px solid var(--border);color:var(--text);padding:7px 11px;border-radius:6px;cursor:pointer;font-size:17px;}
+.mob{display:none;position:fixed;top:68px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--border);padding:18px 28px;z-index:99;}
+.mob.open{display:block;}
+.mob a{display:block;padding:11px 0;color:var(--muted2);text-decoration:none;font-size:15px;border-bottom:1px solid var(--border);}
+@media(max-width:820px){.nav-links,.nav-cta-btn{display:none;}.ham{display:block;}}
+
+/* HERO */
+#hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:120px 0 80px;}
+.hcanvas{position:absolute;inset:0;z-index:0;}
+.hgrid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,212,170,0.035) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,170,0.035) 1px,transparent 1px);background-size:56px 56px;z-index:1;}
+.hglow{position:absolute;top:-20%;left:-10%;width:58%;height:68%;background:radial-gradient(ellipse,rgba(0,212,170,0.06) 0%,transparent 70%);z-index:1;pointer-events:none;}
+.hglow2{position:absolute;bottom:-10%;right:-5%;width:48%;height:58%;background:radial-gradient(ellipse,rgba(240,185,64,0.04) 0%,transparent 70%);z-index:1;pointer-events:none;}
+.hero-c{position:relative;z-index:2;max-width:760px;}
+.hbadge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,212,170,0.07);border:1px solid rgba(0,212,170,0.18);border-radius:40px;padding:7px 16px 7px 10px;margin-bottom:28px;}
+.hdot{width:7px;height:7px;background:var(--teal);border-radius:50%;animation:dpulse 2s ease infinite;}
+@keyframes dpulse{0%,100%{box-shadow:0 0 0 0 rgba(0,212,170,0.4);}50%{box-shadow:0 0 0 5px rgba(0,212,170,0);}}
+.hbadge span{font-size:11px;font-weight:700;font-family:var(--font-h);color:var(--teal);letter-spacing:0.1em;text-transform:uppercase;}
+.hh1{font-size:clamp(2.6rem,5.5vw,4.6rem);font-weight:800;line-height:1.0;letter-spacing:-0.03em;margin-bottom:22px;}
+.hh1 em{font-style:normal;color:var(--teal);}
+.hh1 .hgold{color:var(--gold);}
+.hsub{font-size:1.15rem;color:var(--muted2);max-width:520px;line-height:1.7;margin-bottom:36px;}
+.hbtns{display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.hstats{display:flex;align-items:center;gap:36px;margin-top:56px;flex-wrap:wrap;}
+.hstat strong{display:block;font-family:var(--font-h);font-size:1.9rem;font-weight:800;color:#fff;}
+.hstat strong span{color:var(--teal);}
+.hstat small{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;}
+.hdiv{width:1px;height:36px;background:var(--border);}
+.hscroll{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:7px;color:var(--muted);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;}
+.sline{width:1px;height:36px;background:linear-gradient(var(--teal),transparent);animation:sdn 2s ease infinite;}
+@keyframes sdn{0%{transform:scaleY(0);transform-origin:top;}50%{transform:scaleY(1);transform-origin:top;}51%{transform:scaleY(1);transform-origin:bottom;}100%{transform:scaleY(0);transform-origin:bottom;}}
+
+/* PROBLEM */
+#problem{background:var(--bg2);padding:56px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.prob-row{display:flex;gap:40px;flex-wrap:wrap;align-items:center;}
+.prob-item{display:flex;align-items:center;gap:11px;}
+.prob-icon{width:34px;height:34px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;}
+.prob-item p{font-size:13.5px;color:var(--muted2);}
+.prob-item strong{color:var(--text);}
+
+/* ABOUT */
+#about{background:var(--bg);}
+.about-g{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;}
+.acard{background:var(--card);border:1px solid var(--border);border-radius:var(--r2);padding:28px;position:relative;overflow:hidden;transition:border-color 0.3s;}
+.acard::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--teal),var(--gold));}
+.acard:hover{border-color:rgba(0,212,170,0.28);}
+.acard-ico{width:48px;height:48px;background:rgba(0,212,170,0.09);border:1px solid rgba(0,212,170,0.18);border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:16px;}
+.acard h3{font-size:1.15rem;font-weight:700;margin-bottom:7px;}
+.acard p{font-size:0.875rem;color:var(--muted2);line-height:1.6;}
+.astack{display:flex;flex-direction:column;gap:14px;}
+.afloat{position:absolute;bottom:-14px;right:-14px;background:var(--bg3);border:1px solid var(--border);border-radius:11px;padding:14px 18px;display:flex;align-items:center;gap:11px;}
+.afloat strong{font-size:1.4rem;font-family:var(--font-h);color:var(--teal);}
+.afloat small{font-size:10px;color:var(--muted);display:block;}
+.alist{margin-top:26px;display:flex;flex-direction:column;gap:12px;}
+.alist-item{display:flex;align-items:flex-start;gap:12px;padding:14px;background:var(--bg2);border-radius:9px;border:1px solid var(--border);}
+.alist-ico{width:30px;height:30px;border-radius:7px;background:rgba(0,212,170,0.09);display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;}
+.alist-item h4{font-size:0.92rem;font-weight:600;margin-bottom:2px;}
+.alist-item p{font-size:0.82rem;color:var(--muted2);}
+@media(max-width:900px){.about-g{grid-template-columns:1fr;gap:44px;}}
+
+/* SERVICES */
+#services{background:var(--bg2);}
+.svc-head{text-align:center;margin-bottom:52px;}
+.svc-head .section-sub{margin:10px auto 0;}
+.pkg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.pkg{background:var(--card);border:1px solid var(--border);border-radius:var(--r2);padding:32px;position:relative;overflow:hidden;transition:border-color 0.3s,transform 0.3s;}
+.pkg:hover{border-color:rgba(0,212,170,0.28);transform:translateY(-5px);}
+.pkg.feat{border-color:var(--teal);background:linear-gradient(135deg,rgba(0,212,170,0.055),var(--card));}
+.pkg-badge{position:absolute;top:18px;right:18px;font-family:var(--font-h);font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;background:var(--teal);color:#000;padding:3px 10px;border-radius:20px;}
+.pkg-n{font-family:var(--font-h);font-size:10px;font-weight:700;letter-spacing:0.15em;color:var(--muted);text-transform:uppercase;margin-bottom:14px;}
+.pkg-ico{width:52px;height:52px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:18px;background:rgba(0,212,170,0.09);}
+.pkg-ico.g{background:rgba(240,185,64,0.09);}
+.pkg h3{font-size:1.2rem;font-weight:700;margin-bottom:9px;}
+.pkg p{font-size:0.875rem;color:var(--muted2);line-height:1.6;margin-bottom:20px;}
+.pkg-price{font-family:var(--font-h);font-weight:800;font-size:1.5rem;color:#fff;margin-bottom:5px;}
+.pkg-price span{font-size:0.8rem;font-weight:400;color:var(--muted);}
+.pkg-div{height:1px;background:var(--border);margin:20px 0;}
+.pkg-feats{list-style:none;display:flex;flex-direction:column;gap:9px;}
+.pkg-feats li{display:flex;align-items:flex-start;gap:9px;font-size:0.85rem;color:var(--muted2);}
+.pkg-feats li::before{content:'-->';color:var(--teal);font-weight:700;flex-shrink:0;font-size:0.75rem;margin-top:2px;}
+@media(max-width:900px){.pkg-grid{grid-template-columns:1fr;}}
+
+/* VERTICALS */
+#verticals{background:var(--bg);}
+.vert-hd{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:44px;flex-wrap:wrap;gap:20px;}
+.vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.vcard{background:var(--card);border:1px solid var(--border);border-radius:var(--r2);padding:26px;cursor:pointer;transition:all 0.3s;position:relative;overflow:hidden;}
+.vcard:hover,.vcard.active{border-color:rgba(0,212,170,0.35);transform:translateY(-3px);}
+.vico{font-size:30px;margin-bottom:14px;}
+.vcard h3{font-size:1rem;font-weight:700;margin-bottom:7px;}
+.vcard>p{font-size:0.83rem;color:var(--muted2);line-height:1.6;margin-bottom:14px;}
+.vtags{display:flex;flex-wrap:wrap;gap:5px;}
+.vtag{font-size:10px;color:var(--teal);background:rgba(0,212,170,0.07);border:1px solid rgba(0,212,170,0.14);padding:3px 9px;border-radius:20px;}
+.vdetail{display:none;margin-top:14px;padding-top:14px;border-top:1px solid var(--border);}
+.vdetail.open{display:block;}
+.vdetail h4{font-size:0.8rem;font-weight:700;color:var(--teal);margin-bottom:9px;text-transform:uppercase;letter-spacing:0.08em;}
+.vdetail ul{list-style:none;display:flex;flex-direction:column;gap:6px;}
+.vdetail li{font-size:0.8rem;color:var(--muted2);display:flex;gap:7px;}
+.vdetail li::before{content:'checkmark';font-size:0px;border-left:2px solid var(--teal);padding-left:5px;flex-shrink:0;}
+.vresult{margin-top:12px;padding:10px 12px;background:rgba(0,212,170,0.05);border-radius:7px;border:1px solid rgba(0,212,170,0.14);font-size:0.78rem;color:var(--teal);font-weight:600;}
+@media(max-width:900px){.vgrid{grid-template-columns:1fr 1fr;}}
+@media(max-width:560px){.vgrid{grid-template-columns:1fr;}}
+
+/* HOW */
+#how{background:var(--bg2);}
+.how-hd{text-align:center;margin-bottom:56px;}
+.how-hd .section-sub{margin:10px auto 0;}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;position:relative;}
+.steps::before{content:'';position:absolute;top:44px;left:calc(16.66% + 26px);right:calc(16.66% + 26px);height:1px;background:linear-gradient(90deg,var(--teal),rgba(0,212,170,0.1));z-index:0;}
+.step{background:var(--card);border:1px solid var(--border);border-radius:var(--r2);padding:28px;position:relative;z-index:1;transition:border-color 0.3s,transform 0.3s;}
+.step:hover{border-color:rgba(0,212,170,0.28);transform:translateY(-4px);}
+.step-n{width:48px;height:48px;border-radius:50%;background:var(--bg);border:2px solid var(--teal);display:flex;align-items:center;justify-content:center;font-family:var(--font-h);font-weight:800;font-size:0.95rem;color:var(--teal);margin-bottom:18px;}
+.step h3{font-size:1.1rem;font-weight:700;margin-bottom:9px;}
+.step p{font-size:0.875rem;color:var(--muted2);line-height:1.65;margin-bottom:16px;}
+.step-items{display:flex;flex-direction:column;gap:7px;}
+.step-item{display:flex;align-items:flex-start;gap:8px;font-size:0.8rem;color:var(--muted2);}
+.step-item-dot{width:18px;height:18px;background:rgba(0,212,170,0.09);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:9px;color:var(--teal);flex-shrink:0;font-weight:700;}
+@media(max-width:760px){.steps{grid-template-columns:1fr;}.steps::before{display:none;}}
+
+/* ROI */
+#roi{background:var(--bg);}
+.roi-g{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;}
+.roi-rows{display:flex;flex-direction:column;gap:18px;}
+.roi-row{display:flex;align-items:center;gap:14px;padding:18px;background:var(--card);border:1px solid var(--border);border-radius:var(--r);position:relative;overflow:hidden;}
+.roi-row::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--teal);}
+.roi-row.gld::before{background:var(--gold);}
+.roi-lbl{flex:1;}
+.roi-lbl strong{display:block;font-size:0.88rem;font-weight:600;color:var(--text);}
+.roi-lbl small{font-size:0.78rem;color:var(--muted);}
+.roi-amt{font-family:var(--font-h);font-weight:800;font-size:1.3rem;color:var(--teal);white-space:nowrap;}
+.roi-row.gld .roi-amt{color:var(--gold);}
+.roi-tot{padding:22px;background:linear-gradient(135deg,rgba(0,212,170,0.09),rgba(240,185,64,0.04));border:1px solid rgba(0,212,170,0.28);border-radius:var(--r);display:flex;align-items:center;justify-content:space-between;}
+.roi-tot strong{font-family:var(--font-h);font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);}
+.roi-tot p{font-size:0.78rem;color:var(--muted);margin-top:4px;}
+.roi-tot-num{font-family:var(--font-h);font-weight:800;font-size:1.9rem;color:var(--teal);}
+@media(max-width:900px){.roi-g{grid-template-columns:1fr;gap:44px;}}
+
+/* BLOG */
+#blog{background:var(--bg2);}
+.blog-hd{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:44px;flex-wrap:wrap;gap:20px;}
+.blog-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;}
+.bcard{background:var(--card);border:1px solid var(--border);border-radius:var(--r2);overflow:hidden;transition:all 0.3s;}
+.bcard:hover{border-color:rgba(0,212,170,0.28);transform:translateY(-3px);}
+.bthumb{height:190px;display:flex;align-items:center;justify-content:center;font-size:60px;}
+.bthumb.t{background:linear-gradient(135deg,rgba(0,212,170,0.13),rgba(0,212,170,0.02));}
+.bthumb.g{background:linear-gradient(135deg,rgba(240,185,64,0.13),rgba(240,185,64,0.02));}
+.bmeta{display:flex;align-items:center;gap:11px;padding:22px 22px 0;}
+.bcat{font-size:10px;font-weight:700;font-family:var(--font-h);letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);}
+.bcat.g{color:var(--gold);}
+.bdate{font-size:11px;color:var(--muted);}
+.bbody{padding:14px 22px 24px;}
+.bbody h3{font-size:1.12rem;font-weight:700;line-height:1.28;margin-bottom:9px;}
+.bbody>p{font-size:0.855rem;color:var(--muted2);line-height:1.65;margin-bottom:14px;}
+.bread{font-size:11px;font-weight:700;color:var(--teal);font-family:var(--font-h);letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;display:inline-flex;align-items:center;gap:5px;}
+.bread.g{color:var(--gold);}
+.bfull{display:none;padding:0 22px 24px;border-top:1px solid var(--border);margin-top:6px;}
+.bfull.open{display:block;}
+.bfull h4{font-size:0.95rem;font-weight:700;margin:18px 0 7px;color:var(--teal);}
+.bfull p{font-size:0.855rem;color:var(--muted2);line-height:1.72;margin-bottom:10px;}
+.bfull ul{padding-left:18px;margin-bottom:10px;}
+.bfull li{font-size:0.855rem;color:var(--muted2);line-height:1.7;margin-bottom:5px;}
+@media(max-width:760px){.blog-grid{grid-template-columns:1fr;}}
+
+/* FAQ */
+#faq{background:var(--bg);}
+.faq-hd{text-align:center;margin-bottom:52px;}
+.faq-hd .section-sub{margin:10px auto 0;}
+.faqlist{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:10px;}
+.faq-item{background:var(--card);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;transition:border-color 0.3s;}
+.faq-item.open{border-color:rgba(0,212,170,0.28);}
+.faq-q{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:20px 22px;cursor:pointer;font-weight:600;font-size:0.925rem;}
+.faq-q:hover{color:var(--teal);}
+.faq-arr{width:26px;height:26px;border-radius:50%;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform 0.3s,border-color 0.3s;}
+.faq-item.open .faq-arr{transform:rotate(45deg);border-color:var(--teal);}
+.faq-arr svg{width:13px;height:13px;stroke:var(--muted2);}
+.faq-item.open .faq-arr svg{stroke:var(--teal);}
+.faq-ans{display:none;padding:0 22px 20px;font-size:0.875rem;color:var(--muted2);line-height:1.72;}
+.faq-item.open .faq-ans{display:block;}
+
+/* CTA STRIP */
+#ctastrip{background:linear-gradient(135deg,rgba(0,212,170,0.07),rgba(240,185,64,0.03));border-top:1px solid rgba(0,212,170,0.14);border-bottom:1px solid rgba(0,212,170,0.14);padding:72px 0;}
+.ctai{text-align:center;}
+.ctai h2{font-size:clamp(1.7rem,3.5vw,2.5rem);font-weight:800;letter-spacing:-0.02em;margin-bottom:14px;}
+.ctai p{color:var(--muted2);max-width:480px;margin:0 auto 32px;}
+.cta-btns{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;}
+
+/* CONTACT */
+#contact{background:var(--bg2);}
+.con-g{display:grid;grid-template-columns:1fr 1.4fr;gap:56px;align-items:start;}
+.con-info h2{font-size:1.9rem;font-weight:800;margin-bottom:14px;}
+.con-info>p{color:var(--muted2);line-height:1.7;margin-bottom:28px;}
+.con-items{display:flex;flex-direction:column;gap:14px;}
+.con-item{display:flex;align-items:center;gap:12px;}
+.con-ico{width:40px;height:40px;border-radius:9px;background:rgba(0,212,170,0.09);border:1px solid rgba(0,212,170,0.18);display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;}
+.con-item p{font-size:0.82rem;color:var(--muted);}
+.con-item strong{display:block;font-size:0.92rem;color:var(--text);}
+.con-form{background:var(--card);border:1px solid var(--border);border-radius:var(--r2);padding:32px;}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.fg{display:flex;flex-direction:column;gap:7px;margin-bottom:14px;}
+.fg label{font-size:11px;font-weight:700;font-family:var(--font-h);color:var(--muted);letter-spacing:0.08em;text-transform:uppercase;}
+.fg input,.fg textarea,.fg select{background:var(--bg2);border:1px solid var(--border);border-radius:7px;padding:12px 15px;color:var(--text);font-family:var(--font-b);font-size:0.875rem;outline:none;transition:border-color 0.2s;width:100%;}
+.fg input:focus,.fg textarea:focus,.fg select:focus{border-color:var(--teal);}
+.fg textarea{resize:vertical;min-height:100px;}
+.fg select option{background:var(--bg2);}
+.fcon{display:flex;align-items:flex-start;gap:9px;margin-bottom:18px;}
+.fcon input{margin-top:3px;flex-shrink:0;accent-color:var(--teal);}
+.fcon label{font-size:0.78rem;color:var(--muted2);line-height:1.5;}
+.fcon a{color:var(--teal);}
+.fsuccess{display:none;text-align:center;padding:28px;}
+.fsuccess h3{font-size:1.25rem;font-weight:700;color:var(--teal);margin-bottom:7px;}
+.fsuccess p{color:var(--muted2);}
+@media(max-width:900px){.con-g{grid-template-columns:1fr;}.frow{grid-template-columns:1fr;}}
+
+/* PRIVACY */
+#privacy{background:var(--bg);padding:72px 0;}
+.priv{max-width:820px;margin:0 auto;}
+.priv h1{font-size:2.1rem;font-weight:800;margin-bottom:6px;}
+.priv-meta{font-size:12px;color:var(--muted);margin-bottom:36px;}
+.priv h2{font-size:1.2rem;font-weight:700;color:var(--teal);margin:32px 0 10px;}
+.priv p{font-size:0.875rem;color:var(--muted2);line-height:1.75;margin-bottom:12px;}
+.priv ul{padding-left:18px;margin-bottom:12px;}
+.priv li{font-size:0.875rem;color:var(--muted2);line-height:1.75;margin-bottom:5px;}
+.priv a{color:var(--teal);}
+.pbox{background:rgba(0,212,170,0.04);border:1px solid rgba(0,212,170,0.18);border-radius:var(--r);padding:24px 28px;margin-bottom:32px;}
+.pbox p{font-size:0.855rem;color:var(--muted2);margin:0;}
+
+/* FOOTER */
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:56px 0 28px;}
+.ftgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:44px;margin-bottom:44px;}
+.ftbrand p{font-size:0.855rem;color:var(--muted);line-height:1.7;margin-top:11px;max-width:220px;}
+.ftcol h4{font-family:var(--font-h);font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;}
+.ftcol ul{list-style:none;display:flex;flex-direction:column;gap:9px;}
+.ftcol a{font-size:0.855rem;color:var(--muted2);text-decoration:none;transition:color 0.2s;}
+.ftcol a:hover{color:var(--teal);}
+.ftbot{display:flex;align-items:center;justify-content:space-between;padding-top:28px;border-top:1px solid var(--border);flex-wrap:wrap;gap:10px;}
+.ftbot p{font-size:11px;color:var(--muted);}
+.ftbot a{color:var(--muted2);}
+.popia-badge{display:inline-flex;align-items:center;gap:5px;background:rgba(0,212,170,0.07);border:1px solid rgba(0,212,170,0.18);border-radius:20px;padding:4px 11px;font-size:10px;font-weight:700;font-family:var(--font-h);color:var(--teal);letter-spacing:0.08em;}
+@media(max-width:900px){.ftgrid{grid-template-columns:1fr 1fr;}}
+@media(max-width:560px){.ftgrid{grid-template-columns:1fr;}}
+
+/* COOKIE */
+#cookie{position:fixed;bottom:0;left:0;right:0;z-index:200;background:rgba(13,16,24,0.97);backdrop-filter:blur(12px);border-top:1px solid var(--border);padding:18px 28px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;}
+#cookie p{font-size:12.5px;color:var(--muted2);max-width:580px;}
+#cookie a{color:var(--teal);}
+.ck-btns{display:flex;gap:9px;flex-shrink:0;}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+<div class="container">
+<div class="nav-inner">
+<a href="#hero" class="logo">
+  <div class="logo-box"><svg viewBox="0 0 16 16" fill="none"><rect x="1" y="1" width="6" height="6" rx="1.5" fill="#000"/><rect x="9" y="1" width="6" height="6" rx="1.5" fill="#000" opacity="0.7"/><rect x="1" y="9" width="6" height="6" rx="1.5" fill="#000" opacity="0.7"/><rect x="9" y="9" width="6" height="6" rx="1.5" fill="#000"/></svg></div>
+  Digital Toolbox Agency
+</a>
+<ul class="nav-links">
+  <li><a href="#about">About</a></li>
+  <li><a href="#services">Services</a></li>
+  <li><a href="#verticals">Industries</a></li>
+  <li><a href="#blog">Insights</a></li>
+  <li><a href="#faq">FAQ</a></li>
+  <li><a href="#privacy">Privacy</a></li>
+</ul>
+<a href="#contact" class="btn btn-teal nav-cta-btn" style="font-size:12px;padding:11px 20px;">Book Discovery Session</a>
+<button class="ham" id="ham">&#9776;</button>
+</div>
+</div>
+</nav>
+<div class="mob" id="mob">
+  <a href="#about" class="ml">About</a>
+  <a href="#services" class="ml">Services</a>
+  <a href="#verticals" class="ml">Industries</a>
+  <a href="#blog" class="ml">Insights</a>
+  <a href="#faq" class="ml">FAQ</a>
+  <a href="#privacy" class="ml">Privacy Policy</a>
+  <a href="#contact" class="ml">Contact</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+<canvas class="hcanvas" id="pc"></canvas>
+<div class="hgrid"></div>
+<div class="hglow"></div>
+<div class="hglow2"></div>
+<div class="container">
+<div class="hero-c">
+  <div class="hbadge">
+    <div class="hdot"></div>
+    <span>AI Integration for South African SMEs</span>
+  </div>
+  <h1 class="hh1">Your business.<br/><em>Smarter tools.</em><br/><span class="hgold">Real results.</span></h1>
+  <p class="hsub">We help South African professionals and SMEs embed practical AI into their daily workflows — saving hours, cutting admin, and freeing your team to focus on high-value work.</p>
+  <div class="hbtns">
+    <a href="#contact" class="btn btn-teal">Book Free Discovery Session &#x2197;</a>
+    <a href="#services" class="btn btn-outline">View Services</a>
+  </div>
+  <div class="hstats">
+    <div class="hstat"><strong>10&#x2013;20<span>hrs</span></strong><small>Saved per team member/month</small></div>
+    <div class="hdiv"></div>
+    <div class="hstat"><strong>6<span>+</span></strong><small>Industries served</small></div>
+    <div class="hdiv"></div>
+    <div class="hstat"><strong>R177<span>k+</span></strong><small>Annual value recovered (example school)</small></div>
+  </div>
+</div>
+</div>
+<div class="hscroll"><div class="sline"></div><span>Scroll</span></div>
+</section>
+
+<!-- PROBLEM -->
+<div id="problem">
+<div class="container">
+<div class="prob-row">
+  <div class="prob-item"><div class="prob-icon" style="background:rgba(232,69,96,0.1)">&#x23F1;</div><p><strong>Hours lost</strong> to repetitive document writing every week</p></div>
+  <div class="prob-item"><div class="prob-icon" style="background:rgba(232,69,96,0.1)">&#x1F501;</div><p><strong>Staff answering</strong> the same queries daily &#8212; over and over</p></div>
+  <div class="prob-item"><div class="prob-icon" style="background:rgba(232,69,96,0.1)">&#x1F4DD;</div><p><strong>Senior people</strong> doing junior admin that AI handles in seconds</p></div>
+  <div class="prob-item"><div class="prob-icon" style="background:rgba(240,185,64,0.1)">&#x1F4A1;</div><p><strong>The solution exists.</strong> You just need the right guide to implement it.</p></div>
+</div>
+</div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+<div class="container">
+<div class="about-g">
+  <div class="reveal">
+    <div class="tag">Who We Are</div>
+    <h2 class="section-title">Your AI department &#8212; without the headcount</h2>
+    <p class="section-sub">Digital Toolbox Agency bridges the gap between what AI can do and what your business actually needs. We identify, build, and embed practical AI workflows in the South African context &#8212; with our costs, our tools, our regulatory environment.</p>
+    <div class="alist">
+      <div class="alist-item"><div class="alist-ico">&#x1F1FF;&#x1F1E6;</div><div><h4>Built for South Africa</h4><p>POPIA-compliant by design. Rand-denominated ROI. Local context, local understanding.</p></div></div>
+      <div class="alist-item"><div class="alist-ico">&#x1F527;</div><div><h4>No coding required on your side</h4><p>We use no-code and low-code tools. Your team needs training, not developers.</p></div></div>
+      <div class="alist-item"><div class="alist-ico">&#x1F4C8;</div><div><h4>Measurable outcomes</h4><p>Every engagement includes a time-savings estimate upfront and a quarterly ROI report.</p></div></div>
+    </div>
+  </div>
+  <div class="astack reveal">
+    <div class="acard">
+      <div class="acard-ico">&#x1F3AF;</div>
+      <h3>Precision, not buzzwords</h3>
+      <p>We assess exactly where AI will and won't help your specific business before spending a rand on implementation. Clarity first, always.</p>
+    </div>
+    <div class="acard" style="margin-left:20px">
+      <div class="acard-ico" style="background:rgba(240,185,64,0.09)">&#x1F91D;</div>
+      <h3>We build, you own it</h3>
+      <p>Every workflow is documented and handed over. Capability stays inside your business when we leave.</p>
+    </div>
+    <div class="acard" style="margin-left:40px;position:relative;">
+      <div class="acard-ico" style="background:rgba(232,69,96,0.09)">&#x1F512;</div>
+      <h3>Privacy is non-negotiable</h3>
+      <p>POPIA-compliant design in every workflow. Your client, patient, and learner data is never at risk.</p>
+      <div class="afloat"><strong>POPIA</strong><div><small>Compliant</small><small style="color:var(--teal)">All workflows</small></div></div>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+<div class="container">
+<div class="svc-head reveal">
+  <div class="tag">Service Packages</div>
+  <h2 class="section-title">Three ways to work with us</h2>
+  <p class="section-sub">Start with an audit, move to implementation when ready, then stay on retainer so your AI capability keeps growing.</p>
+</div>
+<div class="pkg-grid reveal">
+  <div class="pkg">
+    <div class="pkg-n">Package 01</div>
+    <div class="pkg-ico">&#x1F50D;</div>
+    <h3>AI Opportunity Audit</h3>
+    <p>Understand exactly where AI can save you time and money before spending a rand on implementation.</p>
+    <div class="pkg-price">R8,000 &#8211; R15,000 <span>once-off</span></div>
+    <div class="pkg-div"></div>
+    <ul class="pkg-feats">
+      <li>2-day workflow and process assessment</li>
+      <li>Top 6&#x2013;10 AI opportunities, ranked by impact</li>
+      <li>Time savings estimate per use case (hrs/month)</li>
+      <li>Tool recommendations with cost breakdown</li>
+      <li>90-minute leadership presentation</li>
+      <li>POPIA risk assessment included</li>
+    </ul>
+  </div>
+  <div class="pkg feat">
+    <div class="pkg-badge">Most Popular</div>
+    <div class="pkg-n">Package 02</div>
+    <div class="pkg-ico">&#x2699;&#xFE0F;</div>
+    <h3>AI Implementation Project</h3>
+    <p>Build and deploy 3&#x2013;5 priority AI workflows. Full setup, testing, and staff training included. You go live.</p>
+    <div class="pkg-price">R25,000 &#8211; R60,000 <span>project fee</span></div>
+    <div class="pkg-div"></div>
+    <ul class="pkg-feats">
+      <li>Custom AI workflow design per use case</li>
+      <li>Prompt engineering and system configuration</li>
+      <li>Integration with your existing tools</li>
+      <li>Staff training: hands-on, role-specific</li>
+      <li>Full process documentation and user guides</li>
+      <li>30-day post-implementation support</li>
+    </ul>
+  </div>
+  <div class="pkg">
+    <div class="pkg-n">Package 03</div>
+    <div class="pkg-ico g">&#x1F504;</div>
+    <h3>Monthly AI Partner Retainer</h3>
+    <p>Your in-house AI department without the headcount. Ongoing management and evolution of your AI capability.</p>
+    <div class="pkg-price">R4,000 &#8211; R8,000 <span>/month</span></div>
+    <div class="pkg-div"></div>
+    <ul class="pkg-feats">
+      <li>Monthly workflow review and optimisation</li>
+      <li>One new AI use case per quarter</li>
+      <li>Unlimited support for your team</li>
+      <li>Tool monitoring as platforms evolve</li>
+      <li>Quarterly ROI performance report</li>
+      <li>Priority access to new AI capabilities</li>
+    </ul>
+  </div>
+</div>
+<div style="text-align:center;margin-top:36px;" class="reveal">
+  <p style="color:var(--muted);font-size:0.855rem;margin-bottom:18px;">Not sure where to start? The Discovery Session is free, no-obligation, and includes live AI demos for your industry.</p>
+  <a href="#contact" class="btn btn-teal">Book Free 60-Minute Discovery Session</a>
+</div>
+</div>
+</section>
+
+<!-- VERTICALS -->
+<section id="verticals">
+<div class="container">
+<div class="vert-hd reveal">
+  <div>
+    <div class="tag">Industries We Serve</div>
+    <h2 class="section-title">Six verticals.<br/>One methodology.</h2>
+  </div>
+  <p style="color:var(--muted2);max-width:320px;font-size:0.875rem;line-height:1.7;">Click any industry to see specific AI applications. We go deep in each vertical &#8212; not generic AI consulting.</p>
+</div>
+<div class="vgrid reveal">
+
+  <div class="vcard" onclick="toggleV(this)">
+    <div class="vico">&#x1F3EB;</div>
+    <h3>Private Schools</h3>
+    <p>Return hundreds of teacher hours per year by automating reports, parent communication, and admin workflows.</p>
+    <div class="vtags"><span class="vtag">Report Writing</span><span class="vtag">Parent Comms</span><span class="vtag">Admin</span></div>
+    <div class="vdetail">
+      <h4>AI Applications</h4>
+      <ul>
+        <li>Learner report generator &#8212; personalised drafts from 5 bullet points in 30 seconds</li>
+        <li>Parent communication templates and newsletter drafting</li>
+        <li>24/7 WhatsApp FAQ assistant for routine parent queries</li>
+        <li>Differentiated worksheet generator (3 ability levels from one brief)</li>
+        <li>Parent meeting briefing notes from teacher observations</li>
+        <li>CAPS-aligned lesson plan scaffolding tools</li>
+      </ul>
+      <div class="vresult">Typical result: 300+ teacher hours recovered per report cycle per year</div>
+    </div>
+  </div>
+
+  <div class="vcard" onclick="toggleV(this)">
+    <div class="vico">&#x1F3E5;</div>
+    <h3>Medical &amp; Dental Practices</h3>
+    <p>Reduce clinical admin burden and give practitioners more time for patient care.</p>
+    <div class="vtags"><span class="vtag">Clinical Notes</span><span class="vtag">Patient Intake</span><span class="vtag">Query Handling</span></div>
+    <div class="vdetail">
+      <h4>AI Applications</h4>
+      <ul>
+        <li>Clinical note summarisation and SOAP note drafting</li>
+        <li>Patient intake form processing and pre-visit briefings</li>
+        <li>After-hours FAQ assistant for appointment and medication queries</li>
+        <li>Medical aid pre-authorisation letter drafting</li>
+        <li>Referral letter generation from clinical notes</li>
+        <li>Recall and follow-up communication automation</li>
+      </ul>
+      <div class="vresult">Typical result: 1&#x2013;2 hours of admin returned to clinical time per practitioner per day</div>
+    </div>
+  </div>
+
+  <div class="vcard" onclick="toggleV(this)">
+    <div class="vico">&#x2696;&#xFE0F;</div>
+    <h3>Law Firms (SME)</h3>
+    <p>Reduce first-draft costs and free your attorneys for high-value legal reasoning.</p>
+    <div class="vtags"><span class="vtag">Contract Drafting</span><span class="vtag">Research</span><span class="vtag">Client Comms</span></div>
+    <div class="vdetail">
+      <h4>AI Applications</h4>
+      <ul>
+        <li>Contract first-drafter &#8212; produce first drafts from standard briefs in minutes</li>
+        <li>Legal research summarisation and case law synthesis</li>
+        <li>Client matter briefing document generation</li>
+        <li>Correspondence and update letter drafting</li>
+        <li>Invoice narrative generation and disbursement descriptions</li>
+        <li>Due diligence checklist generation per matter type</li>
+      </ul>
+      <div class="vresult">Typical result: First-draft work reduced from hours to minutes for routine contract types</div>
+    </div>
+  </div>
+
+  <div class="vcard" onclick="toggleV(this)">
+    <div class="vico">&#x1F4CA;</div>
+    <h3>Accounting Practices</h3>
+    <p>Turn raw financial data into polished client reports faster and handle the tax season query avalanche.</p>
+    <div class="vtags"><span class="vtag">Report Narratives</span><span class="vtag">Client Comms</span><span class="vtag">Query Triage</span></div>
+    <div class="vdetail">
+      <h4>AI Applications</h4>
+      <ul>
+        <li>Management account narrative generation from financial data</li>
+        <li>Client-facing report writing in plain language</li>
+        <li>Tax season FAQ assistant for common client queries</li>
+        <li>Engagement letter and proposal drafting</li>
+        <li>Annual financial statements explanatory notes</li>
+        <li>Board pack preparation support</li>
+      </ul>
+      <div class="vresult">Typical result: Client reporting time reduced by 40&#x2013;60% during peak periods</div>
+    </div>
+  </div>
+
+  <div class="vcard" onclick="toggleV(this)">
+    <div class="vico">&#x1F3E0;</div>
+    <h3>Estate Agencies</h3>
+    <p>AI handles the volume so agents focus on relationships and closings.</p>
+    <div class="vtags"><span class="vtag">Listing Copy</span><span class="vtag">Lead Qualification</span><span class="vtag">Client Comms</span></div>
+    <div class="vdetail">
+      <h4>AI Applications</h4>
+      <ul>
+        <li>Property listing copy generator from key facts</li>
+        <li>WhatsApp lead qualification bot &#8212; filter and prioritise inbound enquiries</li>
+        <li>Offer to purchase and mandate document preparation support</li>
+        <li>Buyer and seller update communication templates</li>
+        <li>Social media caption and property post drafting</li>
+        <li>Area market report generation for client presentations</li>
+      </ul>
+      <div class="vresult">Typical result: Listing production time cut by 75%; lead response under 2 minutes</div>
+    </div>
+  </div>
+
+  <div class="vcard" onclick="toggleV(this)">
+    <div class="vico">&#x1F454;</div>
+    <h3>Recruitment Agencies</h3>
+    <p>Speed and consistency across the full recruitment lifecycle &#8212; from job spec to placement.</p>
+    <div class="vtags"><span class="vtag">CV Screening</span><span class="vtag">Job Specs</span><span class="vtag">Candidate Comms</span></div>
+    <div class="vdetail">
+      <h4>AI Applications</h4>
+      <ul>
+        <li>CV screening and ranking against job specifications</li>
+        <li>Job specification writing from brief notes</li>
+        <li>Interview question generation per role and competency framework</li>
+        <li>Candidate briefing document preparation pre-interview</li>
+        <li>Client update reports and shortlist presentation drafting</li>
+        <li>Offer and regret letter drafting with personalisation at scale</li>
+      </ul>
+      <div class="vresult">Typical result: CV screening time reduced by 70%; placement cycle shortened by 2&#x2013;4 days</div>
+    </div>
+  </div>
+
+</div>
+<div style="margin-top:36px;text-align:center;" class="reveal">
+  <p style="color:var(--muted);font-size:0.855rem;">Don't see your industry? We work across all knowledge-intensive SA businesses. <a href="#contact" style="color:var(--teal)">Let's talk.</a></p>
+</div>
+</div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+<div class="container">
+<div class="how-hd reveal">
+  <div class="tag">How It Works</div>
+  <h2 class="section-title">From discovery to independent in 3 steps</h2>
+  <p class="section-sub">Our process delivers visible results quickly and leaves your team fully capable of running the tools we build &#8212; without permanent dependency on us.</p>
+</div>
+<div class="steps reveal">
+  <div class="step">
+    <div class="step-n">01</div>
+    <h3>Discovery &amp; Audit</h3>
+    <p>We spend time inside your business mapping workflows, identifying pain points, and scoring AI opportunities by effort and impact.</p>
+    <div class="step-items">
+      <div class="step-item"><div class="step-item-dot">1</div> 2-day workflow mapping across all departments</div>
+      <div class="step-item"><div class="step-item-dot">2</div> Top 6&#x2013;10 AI opportunities ranked and documented</div>
+      <div class="step-item"><div class="step-item-dot">3</div> POPIA data handling risk assessment</div>
+      <div class="step-item"><div class="step-item-dot">4</div> Written report + leadership presentation</div>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-n">02</div>
+    <h3>Build &amp; Implement</h3>
+    <p>We build your priority workflows &#8212; custom to your terminology, your tools, your standard. Tested with real data before handover.</p>
+    <div class="step-items">
+      <div class="step-item"><div class="step-item-dot">1</div> Custom prompt and workflow engineering</div>
+      <div class="step-item"><div class="step-item-dot">2</div> Integration with your existing platforms</div>
+      <div class="step-item"><div class="step-item-dot">3</div> Hands-on staff training (role-specific)</div>
+      <div class="step-item"><div class="step-item-dot">4</div> Full documentation and user guides</div>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-n">03</div>
+    <h3>Embed &amp; Evolve</h3>
+    <p>We stay available to optimise, train new staff, and bring one new AI application per quarter as your capacity grows.</p>
+    <div class="step-items">
+      <div class="step-item"><div class="step-item-dot">1</div> 30-day post-implementation support included</div>
+      <div class="step-item"><div class="step-item-dot">2</div> Monthly retainer for ongoing optimisation</div>
+      <div class="step-item"><div class="step-item-dot">3</div> Quarterly performance reports: time saved, ROI</div>
+      <div class="step-item"><div class="step-item-dot">4</div> First-access to new AI capabilities</div>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+
+<!-- ROI -->
+<section id="roi">
+<div class="container">
+<div class="roi-g">
+  <div class="reveal">
+    <div class="tag">The Numbers</div>
+    <h2 class="section-title">What this looks like in real terms</h2>
+    <p class="section-sub">Using a private school with 600 learners and 24 teachers as an example. Conservative, measurable estimates &#8212; not projections.</p>
+    <div style="margin-top:28px;"><a href="#contact" class="btn btn-teal">Calculate Your ROI &#8212; Free</a></div>
+  </div>
+  <div class="roi-rows reveal">
+    <div class="roi-row">
+      <div class="roi-lbl"><strong>Report writing &#8212; 3 cycles per year</strong><small>300+ teacher hours recovered annually</small></div>
+      <div class="roi-amt">R105,000+</div>
+    </div>
+    <div class="roi-row">
+      <div class="roi-lbl"><strong>Parent communication &amp; circulars</strong><small>80+ admin hours saved per year</small></div>
+      <div class="roi-amt">R22,400+</div>
+    </div>
+    <div class="roi-row">
+      <div class="roi-lbl"><strong>Secretary: routine parent queries</strong><small>200+ hours freed via FAQ bot</small></div>
+      <div class="roi-amt">R50,000+</div>
+    </div>
+    <div class="roi-row gld">
+      <div class="roi-lbl"><strong>Lesson planning &amp; resource creation</strong><small>120+ additional hours recovered</small></div>
+      <div class="roi-amt">R42,000+</div>
+    </div>
+    <div class="roi-tot">
+      <div><strong>Total estimated annual value</strong><p>vs. R25k&#x2013;R45k once-off implementation cost</p></div>
+      <div class="roi-tot-num">R219,400+</div>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+
+<!-- BLOG -->
+<section id="blog">
+<div class="container">
+<div class="blog-hd reveal">
+  <div><div class="tag">Insights</div><h2 class="section-title">AI in practice</h2></div>
+</div>
+<div class="blog-grid reveal">
+
+  <div class="bcard" id="b1">
+    <div class="bthumb t">&#x1F3EB;</div>
+    <div class="bmeta"><span class="bcat">Education</span><span class="bdate">January 2026</span></div>
+    <div class="bbody">
+      <h3>How a Johannesburg private school recovered 300 teacher hours in one term</h3>
+      <p>Report writing season is the single biggest drain on teacher time in South African schools. Here is how AI changes the economics &#8212; and the experience &#8212; completely.</p>
+      <span class="bread" onclick="toggleB('b1')">Read article &#x2193;</span>
+    </div>
+    <div class="bfull" id="b1f">
+      <h4>The Problem With Report Writing</h4>
+      <p>Every teacher in every South African private school faces the same reality three times a year: report season. For a teacher with 30 learners across two subjects, writing individualised, varied, CAPS-aligned comments takes anywhere from 6 to 12 hours per cycle. Multiply that by 24 teachers and three cycles a year, and a school is consuming over 430 hours of senior staff time on a task that is largely formulaic.</p>
+      <p>The comments need to sound different for each learner. They need to be positive-constructive, parent-friendly, and professionally written. And they need to be done in a two-week window when teachers are simultaneously running assessments, marking, and managing end-of-term administration.</p>
+      <h4>What AI Makes Possible</h4>
+      <p>We built a report writing assistant using a custom-configured AI workflow. The process: a teacher enters five bullet points about a learner &#8212; strengths, areas for development, attitude, participation, and one specific observation &#8212; and the AI produces a full, personalised, professionally worded report comment in under 30 seconds.</p>
+      <p>The comment varies in structure and language from learner to learner. It incorporates the specific teacher observations. It is CAPS-aware. And it requires only a 2-minute review from the teacher to confirm accuracy and tone.</p>
+      <h4>The Result</h4>
+      <p>In the first report cycle after implementation, the school reduced report writing time from an average of 8 hours per teacher per cycle to under 2 hours. Across 24 teachers and three cycles, that is over 430 hours of recovered staff capacity annually.</p>
+      <ul>
+        <li>Average time per comment: reduced from 12 minutes to under 2 minutes</li>
+        <li>Teacher satisfaction: significantly improved end-of-term experience</li>
+        <li>POPIA compliance: no learner names or personal identifiers entered into AI systems</li>
+      </ul>
+      <p>Report writing is only one of six AI applications we identified at this school. Parent communication, lesson planning, differentiated worksheet generation, and a parent query assistant are all in various stages of implementation.</p>
+    </div>
+  </div>
+
+  <div class="bcard" id="b2">
+    <div class="bthumb g">&#x2696;&#xFE0F;</div>
+    <div class="bmeta"><span class="bcat g">Legal</span><span class="bdate">February 2026</span></div>
+    <div class="bbody">
+      <h3>Why South African law firms are quietly adopting AI &#8212; and what the cautious ones are getting wrong</h3>
+      <p>A clear-eyed look at where AI genuinely helps in legal practice, where the risks are real, and how to navigate POPIA when using AI for client matters.</p>
+      <span class="bread g" onclick="toggleB('b2')">Read article &#x2193;</span>
+    </div>
+    <div class="bfull" id="b2f">
+      <h4>The AI Adoption Divide in South African Law</h4>
+      <p>South African law firms are splitting into two camps. The first group is quietly deploying AI tools for first-draft work, research summarisation, and client communication. The second group is waiting, citing concerns about accuracy and confidentiality. Both positions contain valid insights.</p>
+      <p>The cautious camp is correct that AI cannot be trusted for final legal output. No responsible AI consultant would suggest otherwise. But they are wrong to conclude that because AI cannot replace legal judgment, it has no place in a law firm.</p>
+      <h4>Where AI Genuinely Helps</h4>
+      <p>The highest-value applications are not about replacing legal reasoning &#8212; they are about eliminating the commodity work that surrounds it.</p>
+      <ul>
+        <li><strong>First-draft production:</strong> A standard NDA or lease agreement can be first-drafted by AI from a structured brief in minutes. The attorney reviews and approves. The time saving is in the first draft.</li>
+        <li><strong>Research summarisation:</strong> AI synthesises a 40-page judgment into a structured summary in under a minute. The attorney still reads and interprets &#8212; but starts from a usable summary.</li>
+        <li><strong>Client correspondence:</strong> Update letters and follow-up correspondence are often written by the same attorney who should be billing on substantive work. AI handles the first draft.</li>
+        <li><strong>Invoice narratives:</strong> AI tools trained on your firm's style produce professional narratives from brief time entries.</li>
+      </ul>
+      <h4>POPIA and Client Confidentiality</h4>
+      <p>Entering client names or sensitive matter details into a public AI tool creates a real data protection risk. The solution is not to avoid AI &#8212; it is to use AI tools correctly. Enterprise AI platforms offer explicit data processing agreements under which your data is not used for training. Using anonymised matter references adds further protection.</p>
+      <p>We configure every legal AI workflow with POPIA compliance as a baseline requirement. The firms that figure this out first will have a meaningful competitive and cost advantage within the next 18 months.</p>
+    </div>
+  </div>
+
+</div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+<div class="container">
+<div class="faq-hd reveal">
+  <div class="tag">FAQ</div>
+  <h2 class="section-title">Questions we hear often</h2>
+  <p class="section-sub">Straightforward answers to the things South African business owners ask before committing to an AI integration project.</p>
+</div>
+<div class="faqlist reveal">
+
+  <div class="faq-item">
+    <div class="faq-q">Do my staff need to be tech-savvy to use the tools you build?<div class="faq-arr"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+    <div class="faq-ans">No. We build tools that fit into workflows your staff already use &#8212; email, WhatsApp, Google Docs, Word. Training is hands-on, role-specific, and designed for people who are not technical. We don't teach AI theory; we teach people exactly how to use a specific tool for their specific job.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Is this POPIA compliant? What happens to our data?<div class="faq-arr"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+    <div class="faq-ans">POPIA compliance is built into every workflow we design. Our standard approach: we never enter client names, ID numbers, or sensitive personal information into public AI tools. All workflows use anonymised references. Where enterprise tools are required (for medical and legal clients in particular), we specify platforms with explicit data processing agreements. A POPIA risk assessment is included in every Audit package.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">How long does implementation take?<div class="faq-arr"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+    <div class="faq-ans">A standard implementation (3&#x2013;5 workflows) takes 6&#x2013;10 weeks from kickoff to handover, including build, testing, staff training, and a 30-day stabilisation period. Some single-workflow implementations move in 2&#x2013;3 weeks. We do not rush training and documentation &#8212; these determine whether the tools stick long-term.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Do I need expensive software subscriptions?<div class="faq-arr"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+    <div class="faq-ans">Most implementations require an AI model subscription (Claude Pro or ChatGPT Plus, R200&#x2013;R400/month per user) and in some cases an automation tool (Make or Zapier, R200&#x2013;R800/month). Total ongoing tool cost for most small businesses is R400&#x2013;R1,500/month &#8212; a fraction of the value returned. We provide a full cost breakdown before any implementation decision.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">What if the AI produces incorrect output?<div class="faq-arr"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+    <div class="faq-ans">AI is a first-draft tool, not a final-output tool. Every workflow includes a human review step &#8212; the AI produces 70&#x2013;90% of the output, a person reviews and approves. We tune prompts carefully for your context and quality standard. During the 30-day post-implementation period, we refine anything not meeting your standard.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">What does the free Discovery Session involve?<div class="faq-arr"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+    <div class="faq-ans">A 60-minute session &#8212; in person or video call &#8212; with your principal, practice manager, or business owner. We ask about your workflows and biggest time drains, then show 3 live AI demonstrations relevant to your specific business. No slides, no theory. You see actual tools working with real examples from your industry. No commitment, no hard sell.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">We already use some AI tools. Can you help us use them better?<div class="faq-arr"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+    <div class="faq-ans">Absolutely. Many businesses use AI ad hoc, capturing only 20&#x2013;30% of the potential. We assess what you have, identify what is underused, and build structured workflows that make the tools you already pay for significantly more valuable. No new tools required in many cases.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Can you work with businesses outside Gauteng?<div class="faq-arr"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+    <div class="faq-ans">Yes. Discovery sessions and most training can be conducted via video call. Workflow builds are done remotely. For larger on-site projects, we work across South Africa with travel arrangements agreed upfront. We have worked with clients in Johannesburg, Pretoria, Cape Town, and Durban.</div>
+  </div>
+
+</div>
+</div>
+</section>
+
+<!-- CTA STRIP -->
+<div id="ctastrip">
+<div class="container">
+<div class="ctai reveal">
+  <div class="tag" style="margin-bottom:14px">Get Started</div>
+  <h2>Ready to recover your team's time?</h2>
+  <p>Book a free 60-minute Discovery Session. Live AI demos in your industry &#8212; no commitment, no jargon.</p>
+  <div class="cta-btns">
+    <a href="#contact" class="btn btn-teal">Book Discovery Session &#x2197;</a>
+    <a href="#services" class="btn btn-outline">View All Packages</a>
+  </div>
+</div>
+</div>
+</div>
+
+<!-- CONTACT -->
+<section id="contact">
+<div class="container">
+<div class="con-g">
+  <div class="con-info reveal">
+    <div class="tag">Contact</div>
+    <h2>Let's talk about your business</h2>
+    <p>Tell us your industry and your biggest time drains. We'll respond within one business day to schedule your free Discovery Session.</p>
+    <div class="con-items">
+      <div class="con-item"><div class="con-ico">&#x1F4CD;</div><div><strong>Johannesburg, Gauteng</strong><p>South Africa &#8212; serving clients nationwide</p></div></div>
+      <div class="con-item"><div class="con-ico">&#x1F4E7;</div><div><strong>hello@digitaltoolbox.co.za</strong><p>We respond within one business day</p></div></div>
+      <div class="con-item"><div class="con-ico">&#x1F4AC;</div><div><strong>WhatsApp preferred</strong><p>+27 [your number] &#8212; fastest response</p></div></div>
+      <div class="con-item"><div class="con-ico">&#x1F550;</div><div><strong>Business hours</strong><p>Mon&#x2013;Fri, 08:00&#x2013;17:30 SAST</p></div></div>
+    </div>
+  </div>
+  <div class="con-form reveal">
+    <form id="cform" onsubmit="doSubmit(event)">
+      <div class="frow">
+        <div class="fg"><label>First Name</label><input type="text" placeholder="Jane" required/></div>
+        <div class="fg"><label>Last Name</label><input type="text" placeholder="Smith" required/></div>
+      </div>
+      <div class="fg"><label>Business Email</label><input type="email" placeholder="jane@yourbusiness.co.za" required/></div>
+      <div class="fg"><label>Phone / WhatsApp</label><input type="tel" placeholder="+27 82 000 0000"/></div>
+      <div class="fg">
+        <label>Your Industry</label>
+        <select>
+          <option value="">Select your industry...</option>
+          <option>Private School</option>
+          <option>Medical / Dental Practice</option>
+          <option>Law Firm</option>
+          <option>Accounting Practice</option>
+          <option>Estate Agency</option>
+          <option>Recruitment Agency</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="fg"><label>Biggest time drain right now?</label><textarea placeholder="Tell us briefly what your team spends the most time on that feels repetitive or low-value..."></textarea></div>
+      <div class="fcon">
+        <input type="checkbox" id="con" required/>
+        <label for="con">I consent to Digital Toolbox Agency processing my personal information to respond to this enquiry, in accordance with the <a href="#privacy">Privacy Policy</a> and POPIA. I understand I can withdraw consent at any time.</label>
+      </div>
+      <button type="submit" class="btn btn-teal" style="width:100%;justify-content:center;">Send Message &#x2192;</button>
+    </form>
+    <div class="fsuccess" id="fsuccess">
+      <div style="font-size:44px;margin-bottom:14px;">&#x2705;</div>
+      <h3>Message received</h3>
+      <p>We'll be in touch within one business day to schedule your Discovery Session.</p>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+
+<!-- PRIVACY -->
+<section id="privacy">
+<div class="container">
+<div class="priv reveal">
+  <div class="tag">Legal</div>
+  <h1>Privacy Policy</h1>
+  <p class="priv-meta">Last updated: January 2026 &nbsp;&#183;&nbsp; Version 1.0 &nbsp;&#183;&nbsp; POPIA Compliant</p>
+  <div class="pbox"><p><strong style="color:var(--teal)">Summary:</strong> Digital Toolbox Agency collects only the personal information necessary to respond to your enquiries and deliver our services. We do not sell your data. We do not share it with third parties without your explicit consent except where required by law. You have the right to access, correct, and request deletion of your information at any time. This policy complies with the Protection of Personal Information Act, 4 of 2013 (POPIA).</p></div>
+
+  <h2>1. Who We Are and Who This Policy Applies To</h2>
+  <p>Digital Toolbox Agency ("we", "us", "our") is an AI integration consultancy operating in South Africa, with its principal place of business in Johannesburg, Gauteng. This Privacy Policy applies to all personal information we collect from individuals who visit our website, submit enquiry forms, engage us as clients, or correspond with us.</p>
+  <p>We are the "responsible party" under POPIA, meaning we determine the purpose and means of processing your personal information.</p>
+
+  <h2>2. What Personal Information We Collect</h2>
+  <p>We collect only the personal information necessary for the purposes described in this policy. This may include:</p>
+  <ul>
+    <li><strong>Identity and contact information:</strong> Full name, job title, business name, email address, telephone number, physical address</li>
+    <li><strong>Correspondence records:</strong> Content of emails, WhatsApp messages, and enquiry form submissions</li>
+    <li><strong>Service delivery information:</strong> Business process details and operational information shared during consulting engagements</li>
+    <li><strong>Financial information:</strong> Billing name, address, and payment reference information for invoicing purposes</li>
+    <li><strong>Technical information:</strong> IP address, browser type, pages visited, and time spent on our website</li>
+  </ul>
+  <p>We do not intentionally collect special personal information (health records, racial or ethnic origin, political beliefs, biometric information, or criminal records) unless specifically required and consented to in the context of a consulting engagement.</p>
+
+  <h2>3. Lawful Basis for Processing</h2>
+  <p>Under POPIA, we process personal information only where we have a lawful basis. Our bases include consent, contractual necessity, legitimate interests (where these do not override your rights), and legal obligation.</p>
+
+  <h2>4. How We Use Your Personal Information</h2>
+  <ul>
+    <li>Responding to enquiries and scheduling Discovery Sessions</li>
+    <li>Delivering contracted consulting, implementation, and retainer services</li>
+    <li>Sending invoices and financial documentation</li>
+    <li>Sending service-related and marketing communications (the latter only with explicit consent)</li>
+    <li>Improving our website through anonymised usage analytics</li>
+    <li>Complying with legal and regulatory obligations</li>
+  </ul>
+
+  <h2>5. AI Tools and Third-Party Processing</h2>
+  <p>We use enterprise AI tools (including Anthropic Claude and OpenAI GPT-4) with explicit data processing agreements. Your personal information submitted to us is not entered into public or consumer AI tools. When we build AI workflows for clients, we design these to operate with anonymised data wherever possible. We do not use AI to make automated decisions with legal or significant effects on individuals without human oversight.</p>
+
+  <h2>6. Sharing of Personal Information</h2>
+  <p>We do not sell, rent, or trade your personal information. We share it only with trusted service providers (who are contractually bound to protect it) and where required by South African law. We do not transfer personal information outside South Africa without appropriate safeguards as required by POPIA section 72.</p>
+
+  <h2>7. Data Retention</h2>
+  <ul>
+    <li>Enquiry records (non-converting): 12 months from date of enquiry</li>
+    <li>Client records and correspondence: 5 years from end of last engagement</li>
+    <li>Financial and invoicing records: 7 years as required by South African law</li>
+    <li>Marketing consent records: Until consent is withdrawn, plus 12 months</li>
+    <li>Website analytics data: 24 months in anonymised form</li>
+  </ul>
+
+  <h2>8. Your Rights Under POPIA</h2>
+  <ul>
+    <li><strong>Right to access:</strong> Request a copy of personal information we hold about you</li>
+    <li><strong>Right to correction:</strong> Request correction of inaccurate or incomplete information</li>
+    <li><strong>Right to deletion:</strong> Request deletion where we no longer have a lawful basis for processing</li>
+    <li><strong>Right to object:</strong> Object to processing for direct marketing purposes at any time</li>
+    <li><strong>Right to withdraw consent:</strong> Withdraw consent at any time without affecting prior processing</li>
+    <li><strong>Right to lodge a complaint:</strong> Lodge a complaint with the Information Regulator of South Africa</li>
+  </ul>
+  <p>To exercise these rights: <a href="mailto:privacy@digitaltoolbox.co.za">privacy@digitaltoolbox.co.za</a></p>
+
+  <h2>9. Security of Personal Information</h2>
+  <p>We implement appropriate technical and organisational measures to protect personal information, including encrypted communications, access-controlled systems, regular security reviews, and confidentiality obligations for all staff. In the event of a security compromise likely to cause serious adverse consequences, we will notify you and the Information Regulator without undue delay (POPIA section 22).</p>
+
+  <h2>10. Cookies and Website Analytics</h2>
+  <p>Our website uses essential cookies and optional analytics cookies. We request consent for non-essential cookies via the banner on your first visit. You may disable cookies in your browser settings, though some functionality may be affected.</p>
+
+  <h2>11. Children's Personal Information</h2>
+  <p>Our services are directed at business professionals and are not intended for persons under 18. We do not knowingly collect personal information from minors and will promptly delete any such information if inadvertently received.</p>
+
+  <h2>12. Changes to This Policy</h2>
+  <p>We may update this policy to reflect changes in our practices or legal requirements. We will notify existing clients of material changes by email. The updated policy will be posted here with a revised date.</p>
+
+  <h2>13. Contact and Information Officer</h2>
+  <p><strong>Information Officer:</strong> [Your Name]<br/>
+  <strong>Email:</strong> <a href="mailto:privacy@digitaltoolbox.co.za">privacy@digitaltoolbox.co.za</a><br/>
+  <strong>Address:</strong> Digital Toolbox Agency, Johannesburg, Gauteng, South Africa</p>
+  <p>Information Regulator of South Africa: <a href="https://inforegulator.org.za" target="_blank">inforegulator.org.za</a></p>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<div class="container">
+<div class="ftgrid">
+  <div class="ftbrand">
+    <a href="#hero" class="logo">
+      <div class="logo-box"><svg viewBox="0 0 16 16" fill="none"><rect x="1" y="1" width="6" height="6" rx="1.5" fill="#000"/><rect x="9" y="1" width="6" height="6" rx="1.5" fill="#000" opacity="0.7"/><rect x="1" y="9" width="6" height="6" rx="1.5" fill="#000" opacity="0.7"/><rect x="9" y="9" width="6" height="6" rx="1.5" fill="#000"/></svg></div>
+      Digital Toolbox Agency
+    </a>
+    <p>Practical AI integration for South African professionals and SMEs. POPIA-compliant by design.</p>
+    <div style="margin-top:14px;"><span class="popia-badge">&#x1F512; POPIA Compliant</span></div>
+  </div>
+  <div class="ftcol"><h4>Services</h4><ul><li><a href="#services">AI Opportunity Audit</a></li><li><a href="#services">Implementation Project</a></li><li><a href="#services">Monthly Retainer</a></li><li><a href="#contact">Free Discovery Session</a></li></ul></div>
+  <div class="ftcol"><h4>Industries</h4><ul><li><a href="#verticals">Private Schools</a></li><li><a href="#verticals">Medical &amp; Dental</a></li><li><a href="#verticals">Law Firms</a></li><li><a href="#verticals">Accounting</a></li><li><a href="#verticals">Estate Agencies</a></li><li><a href="#verticals">Recruitment</a></li></ul></div>
+  <div class="ftcol"><h4>Company</h4><ul><li><a href="#about">About</a></li><li><a href="#blog">Insights</a></li><li><a href="#faq">FAQ</a></li><li><a href="#privacy">Privacy Policy</a></li><li><a href="#contact">Contact</a></li></ul></div>
+</div>
+<div class="ftbot">
+  <p>&#169; 2026 Digital Toolbox Agency. All rights reserved. Registered in South Africa.</p>
+  <p><a href="#privacy">Privacy Policy</a> &#183; POPIA Compliant &#183; Johannesburg, Gauteng</p>
+</div>
+</div>
+</footer>
+
+<!-- COOKIE BANNER -->
+<div id="cookie">
+<p>We use essential cookies to operate this website and optional analytics cookies to understand usage. See our <a href="#privacy">Privacy Policy</a>. By continuing you consent to essential cookies.</p>
+<div class="ck-btns">
+  <button class="btn btn-outline" onclick="ckDecline()" style="font-size:11px;padding:9px 16px;">Essential Only</button>
+  <button class="btn btn-teal" onclick="ckAccept()" style="font-size:11px;padding:9px 16px;">Accept All</button>
+</div>
+</div>
+
+<script>
+/* NAV */
+var nav = document.getElementById('nav');
+var ham = document.getElementById('ham');
+var mob = document.getElementById('mob');
+window.addEventListener('scroll', function(){ nav.classList.toggle('sc', window.scrollY > 50); }, {passive:true});
+ham.addEventListener('click', function(){ mob.classList.toggle('open'); });
+document.querySelectorAll('.ml').forEach(function(l){ l.addEventListener('click', function(){ mob.classList.remove('open'); }); });
+
+/* REVEAL */
+var obs = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){ if(e.isIntersecting) e.target.classList.add('on'); });
+}, {threshold:0.08});
+document.querySelectorAll('.reveal').forEach(function(r){ obs.observe(r); });
+
+/* FAQ */
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click', function(){
+    var item = q.parentElement;
+    var was = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(i){ i.classList.remove('open'); });
+    if(!was) item.classList.add('open');
+  });
+});
+
+/* VERTICALS */
+function toggleV(card){
+  var d = card.querySelector('.vdetail');
+  var was = d.classList.contains('open');
+  document.querySelectorAll('.vdetail').forEach(function(x){ x.classList.remove('open'); });
+  document.querySelectorAll('.vcard').forEach(function(c){ c.classList.remove('active'); });
+  if(!was){ d.classList.add('open'); card.classList.add('active'); }
+}
+
+/* BLOG */
+function toggleB(id){
+  var full = document.getElementById(id+'f');
+  var was = full.classList.contains('open');
+  document.querySelectorAll('.bfull').forEach(function(b){ b.classList.remove('open'); });
+  document.querySelectorAll('.bread').forEach(function(r){ if(r.textContent.includes('\u2191')) r.textContent = r.textContent.replace('\u2191','\u2193').replace('Close','Read'); });
+  if(!was){
+    full.classList.add('open');
+    var btn = document.querySelector('#'+id+' .bread');
+    if(btn) btn.textContent = 'Close article \u2191';
+  }
+}
+
+/* CONTACT */
+function doSubmit(e){
+  e.preventDefault();
+  if(!document.getElementById('con').checked){ alert('Please confirm your consent to proceed.'); return; }
+  document.getElementById('cform').style.display = 'none';
+  document.getElementById('fsuccess').style.display = 'block';
+}
+
+/* COOKIE */
+function ckAccept(){ document.getElementById('cookie').style.display='none'; try{localStorage.setItem('dta_ck','all');}catch(e){} }
+function ckDecline(){ document.getElementById('cookie').style.display='none'; try{localStorage.setItem('dta_ck','ess');}catch(e){} }
+(function(){ try{ if(localStorage.getItem('dta_ck')) document.getElementById('cookie').style.display='none'; }catch(e){} })();
+
+/* PARTICLES */
+var cv = document.getElementById('pc');
+var cx = cv.getContext('2d');
+var pts = [];
+var W, H;
+function rsz(){ W = cv.width = cv.offsetWidth; H = cv.height = cv.offsetHeight; }
+rsz();
+window.addEventListener('resize', rsz, {passive:true});
+for(var i=0;i<50;i++){
+  pts.push({x:Math.random()*1440,y:Math.random()*900,vx:(Math.random()-.5)*.28,vy:(Math.random()-.5)*.28,r:Math.random()*1.6+0.4,op:Math.random()*.3+0.06,col:Math.random()>.72?'#F0B940':'#00D4AA'});
+}
+function ln(a,b){
+  var dx=a.x-b.x,dy=a.y-b.y,d=Math.sqrt(dx*dx+dy*dy);
+  if(d<120){cx.beginPath();cx.strokeStyle='rgba(0,212,170,'+(0.055*(1-d/120))+')';cx.lineWidth=0.5;cx.moveTo(a.x,a.y);cx.lineTo(b.x,b.y);cx.stroke();}
+}
+function loop(){
+  cx.clearRect(0,0,W,H);
+  for(var i=0;i<pts.length;i++){
+    var p=pts[i];
+    p.x+=p.vx;p.y+=p.vy;
+    if(p.x<0||p.x>W)p.vx*=-1;
+    if(p.y<0||p.y>H)p.vy*=-1;
+    for(var j=i+1;j<pts.length;j++)ln(p,pts[j]);
+    cx.beginPath();cx.arc(p.x,p.y,p.r,0,6.28);cx.fillStyle=p.col;cx.globalAlpha=p.op;cx.fill();cx.globalAlpha=1;
+  }
+  requestAnimationFrame(loop);
+}
+loop();
+</script>
+</body>
+</html>
